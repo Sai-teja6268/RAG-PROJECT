@@ -1,0 +1,10 @@
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DATA_DIR = PROJECT_ROOT / "data"
+VECTOR_STORE_DIR = PROJECT_ROOT / "vector_store"
+DEFAULT_EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+DEFAULT_CHUNK_SIZE = 1000
+DEFAULT_CHUNK_OVERLAP = 100
+DEFAULT_TOP_K = 5
+GROQ_API_KEY = "[ENCRYPTION_KEY]"
