@@ -30,3 +30,8 @@ class EmbeddingsPipeline:
         embedding = self.model.encode([query])[0]
         return embedding
 
+    def chunk_embeddings(self, chunks: List[Any]) -> np.ndarray:
+        """Generate embeddings for a list of document chunks."""
+        texts = [chunk.page_content for chunk in chunks]
+        return self.model.encode(texts)
+
